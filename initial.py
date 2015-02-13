@@ -61,7 +61,7 @@ def main():
   
   populator = Faker.getPopulator()
   populator.addEntity(Meeting, 5, {
-      'user': randomUser()
+      'user': lambda x: get_user_model().objects.get(pk = populator.generator.randomInt(0, get_user_model().objects.count()))
     })
   addElements = populator.execute()
   
