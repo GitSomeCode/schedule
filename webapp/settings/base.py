@@ -82,6 +82,7 @@ THIRD_PARTY_APPS = (
   # Token Authentication
   #"rest_framework.authtoken",
   "pipeline",
+  "django_faker",
 )
 
 CUSTOM_APPS = (
@@ -92,6 +93,8 @@ CUSTOM_APPS = (
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + CUSTOM_APPS
 # --- /Application Configuration ---
 
+FAKER_LOCALE = None     # settings.LANGUAGE_CODE is loaded
+FAKER_PROVIDERS = None  # faker.DEFAULT_PROVIDERS is loaded (all)
 
 # --- Middleware Definition ---
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware-classes

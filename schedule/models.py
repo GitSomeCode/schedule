@@ -31,6 +31,4 @@ class Meeting(models.Model):
   priority = models.CharField(max_length = 1, choices = PRIORITY_LEVELS, default = DEFAULT_PRIORITY, blank = False)
   
   def __unicode__(self):
-    return "%s" %(self.person + " : " + self.date)
-  
-  
+    return "%s : %s" %(self.person, self.date.strftime("%m/%d/%Y, %I:%M %p"))
