@@ -15,4 +15,6 @@ class allMeetings(ListView):
   context_object_name = "meetings"
 
 class addMeeting(FormView):
-  pass
+  form_class = MeetingForm
+  success_url = "/all"
+  template_name = "schedule/add.html"
