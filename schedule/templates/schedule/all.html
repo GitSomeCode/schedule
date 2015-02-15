@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>All Meetings</title>
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body id="home">
+
+  <ul>
+  {% for m in meetings %}
+    <li>
+      {{ m.company }}
+      with {{ m.person }}
+      at {{ m.date }}
+      located {{ m.location }}
+    </li>
+  {% endfor %}
+  </ul>
+  
+  <a href="{% url 'schedule:add' %}"><button>Add new meeting</button></a>
+
+</body>
+</html>

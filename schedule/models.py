@@ -23,7 +23,7 @@ class Meeting(models.Model):
   person = models.CharField(max_length = 30, default = "", blank = False)
   company = models.CharField(max_length = 30, default = "", blank = True)
   # 'When': The date / time the meeting is scheduled to begin.
-  date = models.DateTimeField(auto_now = False)
+  date = models.DateTimeField(auto_now = False, blank = False)
   # 'Where': The location of the scheduled meeting.
   location = models.CharField(max_length = 100, default = "", blank = False)
   # 
