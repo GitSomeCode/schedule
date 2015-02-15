@@ -83,6 +83,7 @@ THIRD_PARTY_APPS = (
   #"rest_framework.authtoken",
   "pipeline",
   "django_faker",
+  "datetimewidget",
 )
 
 CUSTOM_APPS = (
@@ -106,6 +107,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # below for django-datetime-widget
+    'django.middleware.locale.LocaleMiddleware',
 )
 # --- /Middleware Definition ---
 

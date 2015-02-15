@@ -1,5 +1,6 @@
 from django import forms
 from schedule.models import Meeting
+#from datetimewidget.widgets import DateTimeWidget, DateWidget, TimeWidget
 
 class MeetingForm(forms.ModelForm):
   person = forms.CharField(max_length = 30)
@@ -11,4 +12,4 @@ class MeetingForm(forms.ModelForm):
   class Meta:
     model = Meeting
     exclude = ['ended', 'user']
-  
+    
