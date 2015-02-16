@@ -28,7 +28,7 @@ class Meeting(models.Model):
   location = models.CharField(max_length = 100, default = "", blank = False)
   # 
   ended = models.BooleanField(default = True, blank = False)
-  priority = models.CharField(max_length = 1, choices = PRIORITY_LEVELS, default = DEFAULT_PRIORITY, blank = False)
+  priority = models.PositiveIntegerField(max_length = 1, choices = PRIORITY_LEVELS, default = DEFAULT_PRIORITY, blank = False)
   
   def __unicode__(self):
     return "%s : %s" %(self.person, self.date.strftime("%m/%d/%Y, %I:%M %p"))
